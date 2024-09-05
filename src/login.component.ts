@@ -22,7 +22,6 @@ export class LoginComponent {
   constructor(private fb: FormBuilder, private router: Router) {}
 
   login() {
-    debugger;
     const params = {
       method: 'POST',
       body: JSON.stringify({
