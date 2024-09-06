@@ -21,17 +21,11 @@ body {
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
-#checkmark {
-  font-weight: lighter;
-  fill: #fff;
-  margin: -3.5em auto auto 20px;
-}
 #status {
   font-weight: lighter;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1em;
-  margin-top: -0.2em;
   margin-bottom: 0;
 }
 #lower-side {
@@ -81,6 +75,11 @@ body {
       background-color: darken(rgba(244, 91, 105, 1), 5%);
     }
   }
+
+  button:disabled {
+    background-color: gray;
+    cursor: unset;
+  }
 }
 
 a {
@@ -88,3 +87,16 @@ a {
   color: rgba(white, 0.6);
   font-size: 12px;
 }
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948;
+}
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442;
+}
+
+.gif {
+  content: url('./assets/images/b01ddf257d18c8a9b41e0502161d580c.gif');
+  width: 100%;
+}
+

@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login.component';
-import { HomeComponent } from './home.component';
 
 export const routes: Routes = [
   {
@@ -8,18 +6,14 @@ export const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
   },
+  // Lazy loading of standalone components
   {
     path: 'login',
-    component: LoginComponent,
+    loadComponent: () => import('./components/login/login.component').then((m) => m.LoginComponent)
   },
   {
     path: 'home',
-    component: HomeComponent
+    loadComponent: () => import('./components/home/home.component').then((m) => m.HomeComponent)
   }
+  
 ];
-
-/* @NgModule({
-  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {} */

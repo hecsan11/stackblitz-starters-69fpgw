@@ -4,7 +4,7 @@
     <input
       type="text"
       placeholder="Enter email"
-      name="uname"
+      name="name"
       formControlName="email"
       required
     />
@@ -14,10 +14,11 @@
       type="password"
       placeholder="Enter Password"
       formControlName="password"
-      name="psw"
+      name="password"
       required
     />
 
     <button [disabled]="user.invalid" (click)="login()">Login</button>
   </div>
+
 </form>
